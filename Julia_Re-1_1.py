@@ -6,7 +6,7 @@ from core import util
 
 
 ITER = 50  # 50 is good balance
-IMAGE_NB = 200
+IMAGE_NB = 500
 
 
 start = perf_counter()
@@ -17,7 +17,7 @@ util.save_to_png(image_array, image_path)
 
 os.mkdir("tmp")
 for i in range(IMAGE_NB):
-    re = i / (IMAGE_NB * 2) - 1
+    re = i / (IMAGE_NB * 2.5) - 1
     print(f"Set number {i}/{IMAGE_NB}")
     argv = f"julia tmp/{i:03}.png 720x480 {re}+0.156j"
     image_path, height, width, set_arg = util.parse(argv)

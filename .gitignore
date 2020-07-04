@@ -1,0 +1,6 @@
+!.gitignore
+/core/__pycache__/
+/.idea/
+/.git/
+/tmp/
+/venv/
